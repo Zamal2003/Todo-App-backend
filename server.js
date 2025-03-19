@@ -27,6 +27,11 @@ mongoose.connect(mongoURI)
 // Routes
 app.use('/api/todos', todoRoutes)
 
+app.get('/',(req, res)=>{
+  res.json({message:'server is working fine'})
+})
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
